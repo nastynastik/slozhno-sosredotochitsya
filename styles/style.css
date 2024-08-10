@@ -142,22 +142,18 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-block-start: 30px;
+  padding-block-start: 30px;
 }
 
 .title-questions {
   color: var(--under-header-title);
+  font-size: var(--main-size);
+  line-height: 130%;
 }
 
-.section-why {
-  display: grid;
-  grid-template-columns: 325px 1fr;
-  padding: 17px;
-  column-gap: 10px;
-}
-
-.why-title {
-  font-size: 18px;
+.reasons-title-main {
+  width: calc(380 / 1024 * 100%);
+  line-height: 130%;
 }
 
 .title-decor {
@@ -197,32 +193,35 @@
   border-block-end: 1px solid var(--button-color);
 }
 
+.article-about-link:hover {
+  border-bottom: 1px solid var(--color-border);
+}
+
 .section-what {
-  padding: 35px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding: 20px;
 }
- 
-.medium {
+
+.section-how,.section-why {
   display: grid;
-  grid-template-rows: repeat(3, 1fr, 1fr);
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+  grid-template-columns: 1fr 2fr;
 }
-  
-.what-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-  grid-column: span 3;
-  width: calc(315 / 1024 * 100%);
+
+.section-why {
+  padding: 20px; 
+  margin-block-end: 10px;
+  column-gap: 10px;
 }
 
 .section-how {
-  display: grid;
-  grid-template-columns: 340px 1fr;
-  padding: 20px 20px 0px 15px;
+padding: 20px;
+margin-left: 5px;
+margin-block-start: 30px;
+
+}
+.container {
+  display: grid; 
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
   margin-block-start: 20px;
 }
 
@@ -231,15 +230,9 @@
   margin-top: 20px;
 }
 
-.how-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
-}
-
 .section-images {
   padding: 20px;
-  margin-block-start: 45px;
+  margin-block-start: 30px;
 }
 
 .images-list {
@@ -284,10 +277,6 @@
 }
 
 .street-pic {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  object-position: center;
   grid-column-start: 4;
   grid-column-end: 2;
   grid-row-start: 3;
@@ -326,9 +315,9 @@
 @media (max-width: 768px) {
 
 .header {
-  padding: 10px 0px 10px;
-  margin-block-start: -7px;
-  margin-inline-end: 1px;
+  padding-right: 7px;
+  margin-block-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .decorated-zone::before {
@@ -349,46 +338,44 @@
 .title-decor-under {
   margin-block-start: 22px;
 }
+.reasons-title-main {
+  width: calc(200 / 1024 * 100%);
+  line-height: 130%; 
+}
 .header__theme-menu-list {
   flex-direction: column;
-  margin: 190px 20px auto auto;
+  margin: 180px 20px auto auto;
   gap: 10px;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+}
 .section-why {
-  display: grid;
-  grid-template-columns: 210px 1fr;
   padding: 20px;
-  margin-block-start: 20px;
-  column-gap: 50px;
+  margin-block-start: 10px;
+  column-gap: 20px;
 }
 
 .article-list-item {
   margin-block-end: 20px;
 }
 
-.medium {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-
 .section-what {
   padding: 20px 20px;
+  padding-block-end: 10px;
 }
 
 .section-how {
-  display: grid;
-  grid-template-columns: 1fr 475px;
-  padding: 20px 20px;
-  gap: 10px;
+  padding: 15px 18px;
+  gap: 20px;
+  margin-block-start: 40px;
 }
 
 .section-images {
   flex-wrap: wrap;
-  gap: 10px;
   padding: 10px 20px; 
+  margin-block-start: 40px;
 }
 
 .footer_text {
@@ -401,25 +388,21 @@
   margin: auto;
 }
 
-.main-content {
-  row-gap: 20px;
-}
-
 .header {
   padding: 20px 10px;
 }
 
-.title-questions {
-  margin-bottom: 10px;
+.reasons-title-main {
+  width: calc(800 / 1024 * 100%);
+  line-height: 130%; 
 }
-
 .header_about {
   margin-left: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .header_decorated-element {
-  inset-block-start: 20px;
+  inset-block-start: 10px;
   inset-inline-end: 40px;
 }
 
@@ -430,30 +413,28 @@
 }
 
 .header__theme-menu-list {
-  margin: 60px 0 auto auto;
+  margin: 55px 0 auto auto;
 }
  
 .section-why {
-  display: flex;
-  flex-direction: column;
   padding: 0px 10px;
   gap: 20px;
+  margin-block-start: 10px;
 }
 
 .section-what {
-  padding: 5px 10px;
-  gap: 8px;
-}
-
-.what-title {
-  width: 100%;
+  padding: 10px 10px;
 }
 
 .section-how {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 0px 10px;
-  gap: 5px;
+  padding: 10px 10px;
+  gap: 20px;
+  margin-block-start: 15px;
+}
+
+.section-how,.section-why {
+  display: flex;
+  flex-direction: column;
 } 
   
 .images-list {
@@ -465,12 +446,12 @@
 
 .section-images {
   padding: 10px;
-  margin-block-start: 10px;
+  margin-block-start: 15px;
 }
 
 .decorated-zone::before {
   inset-inline-end: 10px;
-  inset-block-start: 20px;
+  inset-block-start: 10px;
 }
   
 .footer {
